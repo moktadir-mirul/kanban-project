@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom"
 
 
-
-export const TaskDetails = () => {
+export const TaskDetails = ({tasks}) => {
     return(
         <div>
-            <h3>Task Details Page</h3>
-            <button>Go back</button>
+            {tasks?.map((task) => (
+                <h2>{task.name}</h2>
+            ))}
+            <button><Link to={"/"}>Go Back</Link></button>
         </div>
     )
 }
