@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 
 
 export const TaskDetails = ({tasks}) => {
+    console.log(tasks, "tasks");
+    
     return(
         <div>
             {tasks?.map((task) => (

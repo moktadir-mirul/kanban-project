@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Tasks } from "./tasks";
 import { CgAdd } from "react-icons/cg";
 import { FaPlus } from "react-icons/fa";
@@ -8,6 +8,12 @@ export const Form = () => {
     const [tasks, setTasks] = useState([]);
     const [title, setTitle] = useState('');
     const [hiding, setHiding] = useState(false);
+
+    useEffect(() => {
+        fetch("http://localhost:3000/tasks")
+        .then((res) => res.json())
+        .then((data) => setTasks(data))
+    }, [])
     const inputHandler = (log) => {
         setTitle(log.target.value);
     }
