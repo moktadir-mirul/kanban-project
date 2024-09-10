@@ -19,7 +19,9 @@ export const Tasks = (props) => {
                     <button onClick={() => deleteHandler(task.id)}>Delete</button>
                 </li>
             ))}
-            {pageHiding ? (<TaskDetails tasks={tasks} />) : (<p style={{display: "none"}}>none</p>)}
+            <h1 style={{display: "none"}}>
+            <TaskDetails tasks={tasks} />
+            </h1>
         </div>
     )
 }

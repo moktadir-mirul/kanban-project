@@ -1,8 +1,26 @@
 {
-    "tasks": [
+    "backlog": [
         {
             "id" : 1,
             "name" : "Task 1"
+        }
+    ],
+    "finished" : [
+        {
+            "id": "1f",
+            "name": "Test 1"
+        }
+    ],
+    "inprogress" : [
+        {
+            "id": "1i",
+            "name": "Progress 1"
+        }
+    ],
+    "ready" : [
+        {
+            "id": "1r",
+            "name": "Ready 1"
         }
     ]
 }

@@ -2,18 +2,21 @@ import { useEffect, useState } from "react"
 import { Tasks } from "./tasks";
 import { CgAdd } from "react-icons/cg";
 import { FaPlus } from "react-icons/fa";
+import { useTaskLoad } from "../Hook/useTaskLoad";
 
 
-export const Form = () => {
-    const [tasks, setTasks] = useState([]);
+export const Form = ({ urlGiven }) => {
+    // const [tasks, setTasks] = useState([]);
     const [title, setTitle] = useState('');
     const [hiding, setHiding] = useState(false);
 
-    useEffect(() => {
-        fetch("http://localhost:3000/tasks")
-        .then((res) => res.json())
-        .then((data) => setTasks(data))
-    }, [])
+    const {tasks, setTasks} = useTaskLoad([], urlGiven)
+
+    // useEffect(() => {
+    //     fetch("http://localhost:3000/tasks")
+    //     .then((res) => res.json())
+    //     .then((data) => setTasks(data))
+    // }, [])
     const inputHandler = (log) => {
         setTitle(log.target.value);
     }
@@ -30,6 +33,11 @@ export const Form = () => {
         setHiding(false);
     }
 
+    const hideHandler = () => {
+        setHiding(false);
+        setTitle('')
+    }
+
     return (
         <div>
             {hiding === false ? 
@@ -37,7 +45,7 @@ export const Form = () => {
                 (<form action="" onSubmit={submitHandler}>
                     <input type="text" placeholder="enter your task name" onChange={inputHandler} value={title}/>
                     <button>Submit</button>
-                    <button onClick={() => setHiding(false)}>Hide</button>
+                    <button onClick={hideHandler}>Hide</button>
                 </form>)}
                 
             <Tasks 
