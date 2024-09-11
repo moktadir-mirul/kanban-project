@@ -1,0 +1,30 @@
+{
+    "backlog": [
+        {
+            "id" : 1,
+            "dbsName": "backlog",
+            "name" : "Task 1"
+        }
+    ],
+    "finished" : [
+        {
+            "id": "1f",
+            "dbsName": "finished",
+            "name": "Test 1"
+        }
+    ],
+    "inprogress" : [
+        {
+            "id": "1i",
+            "dbsName": "inprogress",
+            "name": "Progress 1"
+        }
+    ],
+    "ready" : [
+        {
+            "id": "1r",
+            "dbsName": "ready",
+            "name": "Ready 1"
+        }
+    ]
+}
