@@ -5,7 +5,7 @@ import { FaPlus } from "react-icons/fa";
 import { useTaskLoad } from "../Hook/useTaskLoad";
 
 
-export const Form = ({ urlGiven }) => {
+export const Form = ({ urlGiven, dbsName }) => {
     // const [tasks, setTasks] = useState([]);
     const [title, setTitle] = useState('');
     const [hiding, setHiding] = useState(false);
@@ -26,6 +26,7 @@ export const Form = ({ urlGiven }) => {
         if(title.trim() === '') {return alert("Task name can't be empty")}
         const newTask = {
             id: Date.now() + '',
+            dbsName: dbsName,
             name: title,
         }
         setTasks([...tasks, newTask]);
