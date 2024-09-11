@@ -1,10 +1,13 @@
-import { Form } from "./Form"
+import { Form } from "./Form";
+
+
 
 
 
 export const Finished = () => {
     const urlGiven = "http://localhost:3000/finished";
-    const dbsName = "finished";
+    const dbsName = "finished/";
+
     return (
         <div>
             <h1>

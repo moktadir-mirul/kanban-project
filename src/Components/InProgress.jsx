@@ -1,10 +1,11 @@
-import { Form } from "./Form"
+import { Form } from "./Form";
 
 
 
 export const InProgress = () => {
     const urlGiven = "http://localhost:3000/inprogress";
-    const dbsName = "inprogress";
+    const dbsName = "inprogress/";
+
     return(
         <div>
             <h1>

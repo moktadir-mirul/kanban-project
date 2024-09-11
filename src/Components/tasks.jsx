@@ -13,9 +13,9 @@ export const Tasks = (props) => {
     }
     return(
         <div>
-            {tasks.map((task) => (
+            {tasks?.map((task) => (
                 <li key={task.id}>
-                    <Link to={`/${task.dbsName}/${task.id}`}>{task.name}</Link>
+                    <Link to={`/${task.dbsName}${task.id}`}>{task.name}</Link>
                     <button onClick={() => deleteHandler(task.id)}>Delete</button>
                 </li>
             ))}
