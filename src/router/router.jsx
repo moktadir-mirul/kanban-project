@@ -5,5 +5,5 @@ import { TaskDetails } from "../Pages/TaskDetails";
 
 export const rootRouter = createBrowserRouter([
     {path: "/", element: <App />},
-    {path: "/details", element: <TaskDetails />}
+    {path: "/:taskID", element: <TaskDetails />}
 ])
