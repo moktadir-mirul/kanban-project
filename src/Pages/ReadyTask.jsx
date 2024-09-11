@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 
-export const TaskDetails = () => {
+export const ReadyTaskDetails = () => {
     const { taskID } = useParams();
     
     const [task, setTask] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/backlog/${taskID}`)
+        fetch(`http://localhost:3000/ready/${taskID}`)
         .then((res) => res.json())
         .then((data) => {
             setTask(data)

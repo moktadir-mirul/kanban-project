@@ -5,7 +5,7 @@ import { FaPlus } from "react-icons/fa";
 import { useTaskLoad } from "../Hook/useTaskLoad";
 
 
-export const Form = ({ urlGiven, dbsName }) => {
+export const Form = ({urlGiven, dbsName}) => {
     // const [tasks, setTasks] = useState([]);
     const [title, setTitle] = useState('');
     const [hiding, setHiding] = useState(false);
@@ -48,11 +48,11 @@ export const Form = ({ urlGiven, dbsName }) => {
                     <button>Submit</button>
                     <button onClick={hideHandler}>Hide</button>
                 </form>)}
-                
-            <Tasks 
-            tasks={tasks}
-            setTasks = {setTasks}
-            />
+
+                <Tasks 
+                tasks={tasks}
+                setTasks = {setTasks}
+                />
         </div>
     )
 }
