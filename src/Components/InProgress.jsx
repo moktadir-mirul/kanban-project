@@ -7,8 +7,8 @@ export const InProgress = () => {
     const dbsName = "inprogress/";
 
     return(
-        <div>
-            <h1>
+        <div className="text-left space-y-2">
+            <h1 className="text-xl font-bold">
                 In Progress
             </h1>
             <Form 

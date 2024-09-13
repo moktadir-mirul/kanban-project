@@ -52,13 +52,13 @@ export const Form = ({urlGiven, dbsName}) => {
     }
 
     return (
-        <div>
+        <div className="space-y-2">
             {hiding === false ? 
-                (<button onClick={() => setHiding(true)}><FaPlus /> Add Task</button>) : 
+                (<button onClick={() => setHiding(true)} className="flex w-44 h-7 justify-start items-center space-x-4 hover:bg-gray-300 hover:rounded-md hover:py-4"><FaPlus /> <span>Add Task</span></button>) : 
                 (<form action="" onSubmit={submitHandler}>
-                    <input type="text" placeholder="enter your task name" onChange={inputHandler} value={title}/>
-                    <button>Submit</button>
-                    <button onClick={hideHandler}>Hide</button>
+                    <input className="indent-1 h-8 rounded-md placeholder:font-sans" type="text" placeholder="Enter your task name" onChange={inputHandler} value={title}/>
+                    <button className="px-3 py-1 my-2 mr-2 rounded-lg bg-sky-800 text-white hover:bg-violet-600">Submit</button>
+                    <button className="px-3 py-1 my-2 mr-2 rounded-lg bg-sky-800 text-white hover:bg-violet-600" onClick={hideHandler}>Hide</button>
                 </form>)}
 
                 <Tasks 
