@@ -1,41 +1,16 @@
 {
   "backlog": [
     {
-      "id": 1,
+      "id": "1726223550004",
       "dbsName": "backlog/",
-      "name": "Task 1"
-    },
-    {
-      "id": "1726205587826",
-      "dbsName": "backlog/",
-      "name": "Mirul"
-    },
-    {
-      "id": "1726205764785",
-      "dbsName": "backlog/",
-      "name": "Midul"
-    },
-    {
-      "id": "1726206172785",
-      "dbsName": "backlog/",
-      "name": "Khan"
+      "name": "BackLog"
     }
   ],
   "finished": [
     {
-      "id": "1f",
+      "id": "1726223562187",
       "dbsName": "finished/",
-      "name": "Test 1"
-    },
-    {
-      "id": "1726206186449",
-      "dbsName": "finished/",
-      "name": "Test 2"
-    },
-    {
-      "id": "1726206932555",
-      "dbsName": "finished/",
-      "name": "Test 3"
+      "name": "Finished 1"
     }
   ],
   "inprogress": [
@@ -43,16 +18,6 @@
       "id": "1i",
       "dbsName": "inprogress/",
       "name": "Progress 1"
-    },
-    {
-      "id": "1726206031553",
-      "dbsName": "inprogress/",
-      "name": "progress 2"
-    },
-    {
-      "id": "1726206180857",
-      "dbsName": "inprogress/",
-      "name": "Progress 3"
     }
   ],
   "ready": [
@@ -60,11 +25,6 @@
       "id": "1r",
       "dbsName": "ready/",
       "name": "Ready 1"
-    },
-    {
-      "id": "1726205859889",
-      "dbsName": "ready/",
-      "name": "Ready 2"
     }
   ]
 }
