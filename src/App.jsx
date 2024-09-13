@@ -7,8 +7,8 @@ import { Ready } from './Components/Ready'
 function App() {
 
   return (
-      <div>
-        <h1>Awesome Kanban Project</h1>
+      <div className='bg-blue-900'>
+        <h1 className='bg-red-800'>Awesome Kanban Project</h1>
         <Backlog />
         <Ready />
         <InProgress />
