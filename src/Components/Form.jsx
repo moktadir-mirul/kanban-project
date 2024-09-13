@@ -12,14 +12,19 @@ export const Form = ({urlGiven, dbsName}) => {
 
     const {tasks, setTasks} = useTaskLoad([], urlGiven)
 
-    // useEffect(() => {
-    //     fetch("http://localhost:3000/tasks")
-    //     .then((res) => res.json())
-    //     .then((data) => setTasks(data))
-    // }, [])
     const inputHandler = (log) => {
         setTitle(log.target.value);
     }
+    
+    const getAllTasks = () => {
+        fetch(urlGiven)
+        .then((res) => res.json())
+        .then((data) => setTasks(data))
+    }
+    
+    useEffect(() => {
+        getAllTasks();
+    }, [])
 
     const submitHandler = (event) => {
         event.preventDefault();
@@ -29,7 +34,14 @@ export const Form = ({urlGiven, dbsName}) => {
             dbsName: dbsName,
             name: title,
         }
-        setTasks([...tasks, newTask]);
+        fetch(urlGiven, {
+            method: "POST",
+            body: JSON.stringify(newTask),
+            headers: {'content-type' : 'application/json'}
+        })
+        .then(() => {
+            getAllTasks()
+        })
         setTitle('');
         setHiding(false);
     }
@@ -52,6 +64,7 @@ export const Form = ({urlGiven, dbsName}) => {
                 <Tasks 
                 tasks={tasks}
                 setTasks = {setTasks}
+                urlGiven = {urlGiven}
                 />
         </div>
     )
