@@ -9,8 +9,8 @@ export const Ready = () => {
     const dbsName = "ready/";
     
     return(
-        <div>
-            <h1>Ready</h1>
+        <div className="text-left space-y-2">
+            <h1 className="text-xl font-bold">Ready</h1>
             <Form 
             urlGiven={urlGiven}
             dbsName = {dbsName}

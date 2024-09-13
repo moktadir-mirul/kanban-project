@@ -7,8 +7,8 @@ export const Backlog = () => {
     const dbsName = "backlog/";
 
     return(
-        <div>
-            <h1>Backlog</h1>
+        <div className="text-left space-y-2">
+            <h1 className="text-xl font-bold">Backlog</h1>
             <Form 
             urlGiven={urlGiven}
             dbsName = {dbsName}
