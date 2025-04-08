@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Tasks } from "./tasks";
-import { CgAdd } from "react-icons/cg";
+// import { CgAdd } from "react-icons/cg";
 import { FaPlus } from "react-icons/fa";
 import { useTaskLoad } from "../Hook/useTaskLoad";
 

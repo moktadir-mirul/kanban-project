@@ -2,12 +2,13 @@ import './App.css'
 import { Backlog } from './Components/backlog'
 import { Finished } from './Components/Finished'
 import { InProgress } from './Components/InProgress'
+
 import { Ready } from './Components/Ready'
 
 function App() {
 
   return (
-      <div className="bg-cyan-600 w-screen h-auto sm:h-screen md:h-full">
+      <div className="bg-cyan-600 w-screen h-auto">
         <h1 className='bg-cyan-500 w-screen h-auto text-center p-5 text-5xl'>Awesome Kanban Project</h1>
         <div className="mx-auto py-10 sm:mx-10 md:w-3/4 md:h-auto md:m-auto xl:flex xl:mx-auto xl:w-screen xl:justify-evenly xl:p-10">
             <div className='flex flex-col gap-y-4 sm:flex sm:flex-row sm:gap-y-0 xl:gap-x-12 xl:ml-5'>
