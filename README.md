@@ -8,5 +8,5 @@ A simple kanban project based on React, where you can add or delete task. Cllick
 
 ### Package Used
 - [React](https://react.dev/)
-- 
+
 Live Site - ***https://my-kanban-cards.netlify.app/***
